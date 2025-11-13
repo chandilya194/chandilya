@@ -1,0 +1,6 @@
+@echo off
+echo Compiling Java server...
+javac RecognitionServer.java
+
+echo Starting Java server...
+java RecognitionServer

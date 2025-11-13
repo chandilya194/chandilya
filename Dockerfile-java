@@ -1,0 +1,12 @@
+FROM openjdk:11-jre-slim
+
+WORKDIR /app
+
+COPY RecognitionServer.java .
+COPY index.html .
+
+RUN javac RecognitionServer.java
+
+EXPOSE 5000
+
+CMD ["java", "RecognitionServer"]
