@@ -1,53 +1,26 @@
 # Student Recognition Wall
 
-A web application to showcase student achievements and recognitions.
+A minimal web application to showcase student achievements.
+
+## Files
+- `index.html` - Complete frontend with embedded CSS/JS
+- `RecognitionServlet.java` - Backend servlet for API
+- `web.xml` - Web application configuration
+- `build.bat` - Build script for Windows
 
 ## Features
-- Add student recognitions with name, achievement, and description
-- View all recognitions in a responsive card layout
-- Modern UI with gradient background and hover effects
-- JSON-based data persistence
+- Add student recognitions
+- View all recognitions in card layout
+- Modern responsive UI
+- LocalStorage persistence (frontend-only mode)
+- Optional Java backend with servlet API
 
-## Technology Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Java Servlets
-- **Build Tool**: Maven
-- **Server**: Any servlet container (Tomcat, Jetty, etc.)
+## Quick Start (Frontend Only)
+1. Open `index.html` in any web browser
+2. Data persists in browser's localStorage
 
-## Setup Instructions
-
-1. **Prerequisites**:
-   - Java 11 or higher
-   - Maven 3.6+
-   - Apache Tomcat 9+ or similar servlet container
-
-2. **Build the project**:
-   ```bash
-   mvn clean package
-   ```
-
-3. **Deploy**:
-   - Copy the generated WAR file from `target/` to your Tomcat `webapps/` directory
-   - Start Tomcat server
-
-4. **Access**:
-   - Open browser and navigate to `http://localhost:8080/student-recognition-wall`
-
-## API Endpoints
-- `GET /api/recognitions` - Retrieve all recognitions
-- `POST /api/recognitions` - Add new recognition
-
-## Project Structure
-```
-src/
-├── main/
-│   ├── java/
-│   │   ├── Student.java
-│   │   └── RecognitionServlet.java
-│   └── webapp/
-│       ├── index.html
-│       ├── styles.css
-│       ├── script.js
-│       └── WEB-INF/
-│           └── web.xml
-```
+## Full Setup (With Java Backend)
+1. Download servlet-api.jar
+2. Run `build.bat`
+3. Deploy generated WAR to Tomcat
+4. Access at `http://localhost:8080/student-recognition-wall`
