@@ -1,26 +1,42 @@
 # Student Recognition Wall
 
-A minimal web application to showcase student achievements.
+A web application to showcase student achievements with HTML frontend and Python backend.
 
 ## Files
-- `index.html` - Complete frontend with embedded CSS/JS
-- `RecognitionServlet.java` - Backend servlet for API
-- `web.xml` - Web application configuration
-- `build.bat` - Build script for Windows
+- `index.html` - Frontend with embedded CSS/JS
+- `app.py` - Python Flask backend
+- `requirements.txt` - Python dependencies
+- `Dockerfile` - Docker configuration
+- `docker-compose.yml` - Docker Compose setup
+- `run.bat` - Run script
 
 ## Features
 - Add student recognitions
 - View all recognitions in card layout
 - Modern responsive UI
-- LocalStorage persistence (frontend-only mode)
-- Optional Java backend with servlet API
+- JSON file persistence
+- Flask REST API
 
-## Quick Start (Frontend Only)
-1. Open `index.html` in any web browser
-2. Data persists in browser's localStorage
+## Quick Start
 
-## Full Setup (With Java Backend)
-1. Download servlet-api.jar
-2. Run `build.bat`
-3. Deploy generated WAR to Tomcat
-4. Access at `http://localhost:8080/student-recognition-wall`
+### Option 1: Local Python
+1. Install Python 3.9+
+2. Run `run.bat` or:
+   ```bash
+   pip install -r requirements.txt
+   python app.py
+   ```
+3. Open `index.html` in browser
+
+### Option 2: Docker
+```bash
+docker-compose up -d
+```
+
+## API Endpoints
+- `GET /api/recognitions` - Get all recognitions
+- `POST /api/recognitions` - Add new recognition
+
+## Access
+- Backend: `http://localhost:5000`
+- Frontend: Open `index.html` in browser
